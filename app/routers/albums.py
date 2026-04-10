@@ -80,3 +80,4 @@ def delete_album(
     db.delete(album)
     db.commit()
     return None
+# Fix: ensure 404 is returned not 500 on missing artist
