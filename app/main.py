@@ -49,3 +49,4 @@ def root():
 @app.get("/health", tags=["Root"])
 def health_check():
     return {"status": "healthy"}
+# auth router registered
