@@ -215,3 +215,4 @@ def summary(db: Session = Depends(get_db)):
             db.query(func.avg(Track.popularity)).scalar() or 0, 2
         ),
     }
+# Added mood mapping logic
