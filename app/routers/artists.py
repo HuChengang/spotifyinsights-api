@@ -77,3 +77,4 @@ def delete_artist(
     db.delete(artist)
     db.commit()
     return None
+# Improve error messages
