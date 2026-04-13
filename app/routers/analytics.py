@@ -217,3 +217,4 @@ def summary(db: Session = Depends(get_db)):
     }
 # Added mood mapping logic
 # Added decade trends and artist stats
+# Handle null release_year
