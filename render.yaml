@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: spotifyinsights-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python scripts/seed_data.py
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./spotifyinsights.db
+      - key: SECRET_KEY
+        value: production-secret-key-change-this
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 30
